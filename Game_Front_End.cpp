@@ -14,7 +14,7 @@ void Questions()
 {
 	string questions[5] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula", "Which is the highest mountain in the world","Which is the football club with the most UCL trophies won", "Which is the closest planet to the Sun" };
 	random_device(rd);
-	uniform_int_distribution<int> dist(1, 5);
+	uniform_int_distribution<int> dist(0, 4);
 	cout << questions[dist(rd)];
 	if (questions[dist(rd)] == "")
 	{
@@ -25,7 +25,7 @@ void Questions()
 
 		}
 	}
-	
+
 }
 
 void FrontEnd()
@@ -40,7 +40,7 @@ void FrontEnd()
 	cout << setw(45) << " ________________________ " << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << "                         You have: " << counter << " lives left " << endl;
-	cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << money << " BGN collected" << endl;
+	cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << endl;
 	cout << setw(45) << "|___________  ___________|" << endl;
 	cout << setw(33) << "||" << endl;
@@ -71,8 +71,8 @@ void TrueAnswer()
 	cout << endl;
 	cout << setw(45) << " ________________________ " << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << endl;
-	cout << setw(20) << "|" << setw(25) << "|" << "                         You have: " << counter << " lives left " << endl; 
-	cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << money << " BGN collected" << endl;
+	cout << setw(20) << "|" << setw(25) << "|" << "                         You have: " << counter << " lives left " << endl;
+	cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << endl;
 	cout << setw(45) << "|___________  ___________|" << endl;
 	cout << setw(33) << "||" << endl;
@@ -80,13 +80,13 @@ void TrueAnswer()
 	cout << "-------------------------------||---------------------------------------------------------------------------------------";
 	cout << "                                                                                                          " << endl;
 	cout << "                                                                                                           " << endl;
-	cout << setw(player) << "[] " << endl;
+	cout << setw(player - 10) << "[] " << endl;
 	cout << "   =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====";
 	cout << endl;
 	cout << endl;
 	cout << endl;
 	cout << "------------------------------------------------------------------------------------------------------------------------";
-	
+
 
 }
 void WrongAnswer()
