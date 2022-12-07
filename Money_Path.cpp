@@ -9,13 +9,13 @@ using namespace std;
 int counter = 3;
 int player = 107;
 int moneyCollected = 0, money = 100;
-string questions[7] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula?", "Which is the highest mountain in the world?","Which country's national football team won the 2018 WC in Russia?", "What is the name of the planet we live on?","Where is Lionel Messi from?","Which year Bulgaria was freed from Turkish slavery?"};
+string questions[8] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula?", "Which is the highest mountain in the world?","Which country's national football team won the 2018 WC in Russia?", "What is the name of the planet we live on?","Where is Lionel Messi from?","Which year Bulgaria was freed from Turkish slavery?","Which is the capital city of Canada?" };
 
 
 void Questions()
 {
 	random_device(rd);
-	uniform_int_distribution<int> dist(0, 6);
+	uniform_int_distribution<int> dist(0, 7);
 	cout << questions[dist(rd)];
 	if (questions[dist(rd)] == "")
 	{
@@ -116,7 +116,7 @@ void TrueAnswer()
 		cout << "------------------------------------------------------------------------------------------------------------------------";
 
 	}
-	
+
 
 }
 void WrongAnswer()
@@ -177,7 +177,7 @@ void GameOver()
 	{
 		cout << "						   You won 500 BGN";
 	}
-		
+
 }
 void GameWon()
 {
@@ -198,7 +198,7 @@ int main()
 
 	// Back-end//
 	string answer;
-	
+
 	cout << endl;
 	cout << endl;
 
@@ -206,7 +206,7 @@ int main()
 	do {
 		cout << "Input your answer here:";
 		cin >> answer;
-		if (questions[0] == "Which is the biggest country in the world?" && answer == "Russia" || questions[1] == "Which is the highest peak on the Balkan Peninsula?" && answer == "Musalla" || questions[2] == "Which is the highest mountain in the world?" && answer == "Himalayas" || questions[3] == "Which country's national football team won the 2018 WC in Russia?" && answer == "France" || questions[4] == "What is the name of the planet we live on?" && answer == "Earth" || questions[5] == "Where is Lionel Messi from?" && answer == "Argentina" || questions[6] == "Which year Bulgaria was freed from Turkish slavery?" && answer == "1878")
+		if (questions[0] == "Which is the biggest country in the world?" && answer == "Russia" || questions[1] == "Which is the highest peak on the Balkan Peninsula?" && answer == "Musalla" || questions[2] == "Which is the highest mountain in the world?" && answer == "Himalayas" || questions[3] == "Which country's national football team won the 2018 WC in Russia?" && answer == "France" || questions[4] == "What is the name of the planet we live on?" && answer == "Earth" || questions[5] == "Where is Lionel Messi from?" && answer == "Argentina" || questions[6] == "Which year Bulgaria was freed from Turkish slavery?" && answer == "1878" || questions[7] =="Which is the capital city of Canada?" && answer == "Ottawa")
 		{
 			TrueAnswer();
 		}
