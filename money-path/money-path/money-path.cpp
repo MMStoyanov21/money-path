@@ -3,6 +3,8 @@
 #include <Windows.h>
 #include <random>
 #include <cstring>
+#include <conio.h>
+#include <cstdlib> 
 
 using namespace std;
 
@@ -234,12 +236,29 @@ void GameWon()
 	cout << "																																																																																					===============================" << endl;
 	cout << "																																																																																							You won 1500 BGN" << endl;
 }
+void mainMenu()
+{
+	int menuChoice;
+	cout << "              " << 
+"MENU" << endl;
+	cout << "              " << 
+"1 START GAME" << endl;
+	cout << "              " << 
+"2 EXIT GAME" << endl;
+	cin >> menuChoice;
+	if (menuChoice == 1)
+		FrontEnd();
+	else
+		exit(0);
+
+}
 
 int main()
 
 {
+	SetConsoleDisplayMode(GetStdHandle(STD_OUTPUT_HANDLE), CONSOLE_FULLSCREEN_MODE, 0);
 	//Front-end//
-	FrontEnd();
+	mainMenu();
 
 
 
