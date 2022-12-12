@@ -213,7 +213,7 @@ void GameOver()
 	cout << "							  _____ _____ _____ _____    _____ _____ _____ _____   " <<endl;
 	cout << "							 |   __|  _  |     |   __|  |     |  |  |   __| __  | " <<endl;
 	cout << "							 |  |  |     | | | |   __|  |  |  |  |  |   __|    -|" <<endl;
-	cout << "							 |_____|__|__|_|_|_|_____|  |_____|\\___/|_____|__|__|" <<endl;
+	cout << "							 |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|" <<endl;
 	cout << endl;
 	if (moneyCollected < 500)
 	{
@@ -262,6 +262,26 @@ void GameWon()
 	cout << "						                                     ==You won 1500 BGN==" << endl;
 	cout << "															 ====================" << endl;
 }
+
+void Rules()
+{
+	system("cls");
+
+	cout << "/ $$$$$$$ / $$ / $$ / $$ / $$$$$$$$ / $$$$$$			" << endl;
+	cout << "| $$__  $$ | $$ | $$ | $$ | $$_____/ /$$__  $$			" << endl;
+	cout << "| $$  \\ $$ | $$ | $$ | $$ | $$ | $$  \\__/				" << endl;
+	cout << "| $$$$$$$/| $$ | $$ | $$ | $$$$$ | $$$$$$				" << endl;
+	cout << "| $$__  $$ | $$ | $$ | $$ | $$__ / \\____  $$			" << endl;
+	cout << "| $$  \\ $$ | $$ | $$ | $$ | $$ / $$  \\ $$				" << endl;
+	cout << "| $$ | $$ | $$$$$$/| $$$$$$$$ | $$$$$$$$ | $$$$$$/		" << endl;
+	cout << "|__/  |__ / \\______/ |________/|________ / \\______ /	" << endl;
+
+
+	cout << "1 W" << endl;
+
+
+}
+
 void mainMenu()
 {
 	int menuChoice;
@@ -270,14 +290,18 @@ void mainMenu()
 	cout << "              " <<
 		"1 START GAME" << endl;
 	cout << "              " <<
-		"2 EXIT GAME" << endl;
+		"2 RULES" << endl;
+	cout << "              " <<
+		"3 EXIT GAME" << endl;
 	cin >> menuChoice;
 	if (menuChoice == 1)
 		FrontEnd();
-	else
-		exit(0);
+	if (menuChoice == 2)
+		Rules();
 
 }
+
+
 
 int main()
 
@@ -287,7 +311,7 @@ int main()
 	mainMenu();
 
 	//Front-end//
-	FrontEnd();
+
 
 
 
