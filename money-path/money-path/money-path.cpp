@@ -1,10 +1,9 @@
-#include <iostream>
+﻿#include <iostream>
 #include <iomanip>
 #include <Windows.h>
 #include <random>
 #include <cstring>
 #include <conio.h>
-#include <cstdlib> 
 
 using namespace std;
 
@@ -12,17 +11,35 @@ int counter = 3;
 int player = 7;
 int moneyCollected = 0, money = 100;
 string questions[14] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula?", "Which is the highest mountain in the world?","Which country's national football team won the 2018 WC in Russia?", "Which is the closest planet to the Sun?","Where is Lionel Messi from?",
-"Which year Bulgaria was freed from Turkish slavery?","Which is the capital city of Canada?", "Who is the football player with the most Ballon d'Or won?(answer only with family name)", "Which is the capital city of Albania?", "Which year did the second world war star?", "Which is the capital of Bulgaria?", "Which year did Vasil Levski die?", "Which year did the first world war start?"};
+"Which year Bulgaria was freed from Turkish slavery?","Which is the capital city of Canada?", "Who is the football player with the most Ballon d'Or won?(answer only with family name)", "Which is the capital city of Albania?", "Which year did the second world war star?", "Which is the capital of Bulgaria?", "Which year did Vasil Levski die?", "Which year did the first world war start?" };
 string currentQuestion;
+
 
 void Questions()
 {
 
 	random_device(rd);
-	uniform_int_distribution<int> dist(0, 13);
+	uniform_int_distribution<int> dist(0, 9);
 	currentQuestion = questions[dist(rd)];
 
 
+}
+void Forfeit()
+{
+	system("cls");
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << "=================================================================" << endl;
+	cout << "====You decided to stop and get the collected money until now====" << endl;
+	cout << "=================================================================" << endl;
+	cout << "                    You won " << moneyCollected << " BGN";
 }
 
 void FrontEnd()
@@ -37,14 +54,14 @@ void FrontEnd()
 	cout << endl;
 	cout << setw(45) << " ________________________ " << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << endl;
-	cout << setw(20) << "|" << setw(25) << "|" << "                         You have: " << counter << " lives left " << endl;
-	cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
-	cout << setw(20) << "|" << setw(25) << "|" << endl;
+	cout << setw(20) << "|" << setw(25) << "|" << "				      You have: " << counter << " lives left " << endl;
+	cout << setw(35) << "|  Question for " << money << " BGN  |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
+	cout << setw(20) << "|" << setw(25) << "|" << "         If you want to stop and get the money you collected until now input '!F'"<<endl;
 	cout << setw(45) << "|___________  ___________|" << endl;
 	cout << setw(33) << "||" << endl;
 	cout << setw(33) << "||" << endl;
-	cout << "-------------------------------||------------------------------------------------------------------------------------------------------------------------------";
-	cout << setw(211) << "FINISH" << endl;
+	cout << "-------------------------------||------------------------------------------------------------------------------------------------------------------------------" << endl;
+	cout << setw(158) << "FINISH" << endl;
 	cout << "                                                                                                           " << endl;
 	cout << setw(player) << "[] " << endl;
 	cout << "   =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====";
@@ -74,14 +91,14 @@ void TrueAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << "|" << endl;
-		cout << setw(20) << "|" << setw(25) << "|" << "                         You have: " << counter << " lives left " << endl;
-		cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
-		cout << setw(20) << "|" << setw(25) << "|" << endl;
+		cout << setw(20) << "|" << setw(25) << "|" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(35) << "|  Question for " << money << " BGN  |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
+		cout << setw(20) << "|" << setw(25) << "|" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
 		cout << setw(33) << "||" << endl;
 		cout << setw(33) << "||" << endl;
 		cout << "-------------------------------||-------------------------------------------------------------------------------------------------------------------------------";
-		cout << setw(211) << "FINISH" << endl;
+		cout << setw(158) << "FINISH" << endl;
 		cout << "                                                                                                           " << endl;
 		cout << setw(player += 10) << "[] " << endl;
 		cout << "   =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====";
@@ -102,14 +119,14 @@ void TrueAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << "                         You have: " << counter << " lives left " << endl;
-		cout << setw(35) << "|  Question for " << money << " BGN |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(35) << "|  Question for " << money << " BGN |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
 		cout << setw(33) << " ||" << endl;
 		cout << setw(33) << " ||" << endl;
 		cout << "-------------------------------||-------------------------------------------------------------------------------------------------------------------------------";
-		cout << setw(211) << "FINISH" << endl;
+		cout << setw(158) << "FINISH" << endl;
 		cout << "                                                                                                           " << endl;
 		cout << setw(player += 10) << "[] " << endl;
 		cout << "   =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====";
@@ -135,14 +152,14 @@ void WrongAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << "                         You have: " << counter << " lives left " << endl;
-		cout << setw(35) << "|  Question for " << money << " BGN  |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(35) << "|  Question for " << money << " BGN  |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
 		cout << setw(33) << "||" << endl;
 		cout << setw(33) << "||" << endl;
 		cout << "-------------------------------||-------------------------------------------------------------------------------------------------------------------------------";
-		cout << setw(211) << "FINISH" << endl;
+		cout << setw(158) << "FINISH" << endl;
 		cout << "                                                                                                           " << endl;
 		cout << setw(player) << "[] " << endl;
 		cout << "   =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====";
@@ -161,14 +178,14 @@ void WrongAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << "                         You have: " << counter << " lives left " << endl;
-		cout << setw(35) << "|  Question for " << money << " BGN |" << "			    You have: " << moneyCollected << " BGN collected" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(35) << "|  Question for " << money << " BGN |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
 		cout << setw(33) << " ||" << endl;
 		cout << setw(33) << " ||" << endl;
 		cout << "-------------------------------||-------------------------------------------------------------------------------------------------------------------------------";
-		cout << setw(211) << "FINISH" << endl;
+		cout << setw(158) << "FINISH" << endl;
 		cout << "                                                                                                           " << endl;
 		cout << setw(player) << "[] " << endl;
 		cout << "   =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====     =====";
@@ -183,7 +200,6 @@ void WrongAnswer()
 }
 void GameOver()
 {
-
 	system("cls");
 	cout << endl;
 	cout << endl;
@@ -194,26 +210,29 @@ void GameOver()
 	cout << endl;
 	cout << endl;
 	cout << endl;
+	cout << "							  _____ _____ _____ _____    _____ _____ _____ _____   " <<endl;
+	cout << "							 |   __|  _  |     |   __|  |     |  |  |   __| __  | " <<endl;
+	cout << "							 |  |  |     | | | |   __|  |  |  |  |  |   __|    -|" <<endl;
+	cout << "							 |_____|__|__|_|_|_|_____|  |_____|\\___/|_____|__|__|" <<endl;
 	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << "                                                                                             =========================" << endl;
-	cout << "                                                                                             ========Game Over========" << endl;
-	cout << "                                                                                             =========================" << endl;
 	if (moneyCollected < 500)
 	{
-		cout << "						                                                  You won 0 BGN";
+		cout << "									=====================" << endl;
+		cout << "									====You won 0 BGN====" << endl;
+		cout << "									=====================" << endl;
 	}
 	else if (moneyCollected >= 500 && money <= 999)
 	{
-		cout << "						                                                  You won 500 BGN";
+		cout << "									=====================" << endl;
+		cout << "						            ===You won 500 BGN===" << endl;
+		cout << "									=====================" << endl;
 	}
 	else if (moneyCollected >= 1000 && money <= 1499)
 	{
-		cout << "						                                                  You won 1000 BGN";
+		cout << "									====================" << endl;
+		cout << "						            ==You won 1000 BGN==" << endl;
+		cout << "									====================" << endl;
 	}
-
 }
 void GameWon()
 {
@@ -231,20 +250,27 @@ void GameWon()
 	cout << endl;
 	cout << endl;
 	cout << endl;
-	cout << "																																																																																					===============================" << endl;
-	cout << "																																																																																					====CONGRATULATIONS YOU WON====" << endl;
-	cout << "																																																																																					===============================" << endl;
-	cout << "																																																																																							You won 1500 BGN" << endl;
+	cout << "			######   #######  ##    ##  ######   ########     ###    ######## ##     ## ##          ###    ######## ####  #######  ##    ##  ###### " <<endl;
+	cout << "			##    ## ##     ## ###   ## ##    ##  ##     ##   ## ##      ##    ##     ## ##         ## ##      ##     ##  ##     ## ###   ## ##    ##" <<endl;
+	cout << "			##       ##     ## ####  ## ##        ##     ##  ##   ##     ##    ##     ## ##        ##   ##     ##     ##  ##     ## ####  ## ##       " <<endl;
+	cout << "			##       ##     ## ## ## ## ##   #### ########  ##     ##    ##    ##     ## ##       ##     ##    ##     ##  ##     ## ## ## ##  ######  " << endl;
+	cout << "			##       ##     ## ##  #### ##    ##  ##   ##   #########    ##    ##     ## ##       #########    ##     ##  ##     ## ##  ####       ## " <<endl;
+	cout << "			##    ## ##     ## ##   ### ##    ##  ##    ##  ##     ##    ##    ##     ## ##       ##     ##    ##     ##  ##     ## ##   ### ##    ## " << endl;
+	cout << "			 ######   #######  ##    ##  ######   ##     ## ##     ##    ##     #######  ######## ##     ##    ##    ####  #######  ##    ##  ######  " << endl;
+	cout << endl;
+	cout << "															 ====================" << endl;
+	cout << "						                                     ==You won 1500 BGN==" << endl;
+	cout << "															 ====================" << endl;
 }
 void mainMenu()
 {
 	int menuChoice;
-	cout << "              " << 
-"MENU" << endl;
-	cout << "              " << 
-"1 START GAME" << endl;
-	cout << "              " << 
-"2 EXIT GAME" << endl;
+	cout << "              " <<
+		"MENU" << endl;
+	cout << "              " <<
+		"1 START GAME" << endl;
+	cout << "              " <<
+		"2 EXIT GAME" << endl;
 	cin >> menuChoice;
 	if (menuChoice == 1)
 		FrontEnd();
@@ -259,6 +285,9 @@ int main()
 	SetConsoleDisplayMode(GetStdHandle(STD_OUTPUT_HANDLE), CONSOLE_FULLSCREEN_MODE, 0);
 	//Front-end//
 	mainMenu();
+
+	//Front-end//
+	FrontEnd();
 
 
 
@@ -286,6 +315,7 @@ int main()
 			questions[11] == currentQuestion && answer == "Sofia" ||
 			questions[12] == currentQuestion && answer == "1873" ||
 			questions[13] == currentQuestion && answer == "1914")
+
 		{
 			TrueAnswer();
 		}
@@ -301,6 +331,11 @@ int main()
 		if (player > 155)
 		{
 			GameWon();
+			break;
+		}
+		if (answer == "!F")
+		{
+			Forfeit();
 			break;
 		}
 
