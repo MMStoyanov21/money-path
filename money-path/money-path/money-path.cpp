@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <Windows.h>
 #include <random>
@@ -318,6 +318,7 @@ void mainMenu()
 {
 
 	system("cls");
+<<<<<<< HEAD
 	cout << endl;
 	cout << endl;
 	cout << endl;
@@ -325,6 +326,8 @@ void mainMenu()
 	cout << endl;
 	cout << endl;
 
+=======
+>>>>>>> 166a1a4a300751dd46a469744065c07761466897
 	cout << " /$$      /$$                                               /$$$$$$$             /$$     /$$  " << endl;
 	cout << "| $$$    /$$$                                              | $$__  $$           | $$    | $$" << endl;
 	cout << "| $$$$  /$$$$  /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$      | $$  \\ $$ /$$$$$$  /$$$$$$  | $$$$$$$" << endl;
