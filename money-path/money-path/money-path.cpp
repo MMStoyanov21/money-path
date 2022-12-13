@@ -15,7 +15,7 @@ string questions[16] = { "Which is the biggest country in the world?", "Which is
 "Which is the highest mountain in the world?","Which country's national football team won the 2018 WC in Russia?", "Which is the closest planet to the Sun?","Where is Lionel Messi from?",
 "Which year Bulgaria was freed from Turkish slavery?","Which is the capital city of Canada?",
 "Who is the football player with the most Ballon d'Or won?(answer only with family name)", "Which is the capital city of Albania?", "Which year did the second world war star?",
-"Which is the capital of Bulgaria?", "Which year did Vasil Levski die?", "Which year did the first world war start?","Calculate this: 1^0 + 1", ""};
+"Which is the capital of Bulgaria?", "Which year did Vasil Levski die?", "Which year did the first world war start?","Calculate this: 1^0 + 1", "" };
 string currentQuestion;
 string answers[16] = {
 	"Russia",
@@ -33,15 +33,15 @@ string answers[16] = {
 	"1873",
 	"1914",
 	"2",
-	"tedo"};
+	"tedo" };
 int menuChoice;
 
 
-	void Questions()
+void Questions()
 {
 
 	random_device(rd);
-	uniform_int_distribution<int> dist(0, (questionsLength - 1 >= 1)? questionsLength - 1: 1);
+	uniform_int_distribution<int> dist(0, (questionsLength - 1 >= 1) ? questionsLength - 1 : 1);
 	currentQuestion = questions[dist(rd)];
 
 
@@ -264,22 +264,22 @@ void GameOver()
 }
 void GameWon()
 {
-		system("cls");
-		cout << endl << endl << endl << endl;
-		cout << endl << endl << endl << endl << endl;
-		cout << endl << endl << endl << endl;
-		cout << "		 ######   #######  ##    ##  ######   ########     ###    ######## ##     ## ##          ###    ######## ####  #######  ##    ##  ###### " << endl;
-		cout << "		##    ## ##     ## ###   ## ##    ##  ##     ##   ## ##      ##    ##     ## ##         ## ##      ##     ##  ##     ## ###   ## ##    ##" << endl;
-		cout << "		##       ##     ## ####  ## ##        ##     ##  ##   ##     ##    ##     ## ##        ##   ##     ##     ##  ##     ## ####  ## ##       " << endl;
-		cout << "		##       ##     ## ## ## ## ##   #### ########  ##     ##    ##    ##     ## ##       ##     ##    ##     ##  ##     ## ## ## ##  ######  " << endl;
-		cout << "		##       ##     ## ##  #### ##    ##  ##   ##   #########    ##    ##     ## ##       #########    ##     ##  ##     ## ##  ####       ## " << endl;
-		cout << "		##    ## ##     ## ##   ### ##    ##  ##    ##  ##     ##    ##    ##     ## ##       ##     ##    ##     ##  ##     ## ##   ### ##    ## " << endl;
-		cout << "		 ######   #######  ##    ##  ######   ##     ## ##     ##    ##     #######  ######## ##     ##    ##    ####  #######  ##    ##  ######  " << endl;
-		cout << endl;
-		cout << "									====================" << endl;
-		cout << "									==You won 1500 BGN==" << endl;
-		cout << "									====================" << endl;
-	
+	system("cls");
+	cout << endl << endl << endl << endl;
+	cout << endl << endl << endl << endl << endl;
+	cout << endl << endl << endl << endl;
+	cout << "		 ######   #######  ##    ##  ######   ########     ###    ######## ##     ## ##          ###    ######## ####  #######  ##    ##  ###### " << endl;
+	cout << "		##    ## ##     ## ###   ## ##    ##  ##     ##   ## ##      ##    ##     ## ##         ## ##      ##     ##  ##     ## ###   ## ##    ##" << endl;
+	cout << "		##       ##     ## ####  ## ##        ##     ##  ##   ##     ##    ##     ## ##        ##   ##     ##     ##  ##     ## ####  ## ##       " << endl;
+	cout << "		##       ##     ## ## ## ## ##   #### ########  ##     ##    ##    ##     ## ##       ##     ##    ##     ##  ##     ## ## ## ##  ######  " << endl;
+	cout << "		##       ##     ## ##  #### ##    ##  ##   ##   #########    ##    ##     ## ##       #########    ##     ##  ##     ## ##  ####       ## " << endl;
+	cout << "		##    ## ##     ## ##   ### ##    ##  ##    ##  ##     ##    ##    ##     ## ##       ##     ##    ##     ##  ##     ## ##   ### ##    ## " << endl;
+	cout << "		 ######   #######  ##    ##  ######   ##     ## ##     ##    ##     #######  ######## ##     ##    ##    ####  #######  ##    ##  ######  " << endl;
+	cout << endl;
+	cout << "									====================" << endl;
+	cout << "									==You won 1500 BGN==" << endl;
+	cout << "									====================" << endl;
+
 }
 
 
@@ -300,8 +300,6 @@ void Rules()
 	cout << "|__/  |__/ \\______/ |________/|________/ \\______/" << endl;
 
 	cout << "Rule 1: After starting the game there will be 15 easy questions and if you answer them right, you will win 1500 BGN" << endl;
-	cout << "" << endl;
-
 	cout << "1 Menu" << endl;
 	cout << "2 Exit" << endl;
 	cin >> menuChoice;
@@ -318,7 +316,7 @@ void Rules()
 }
 void mainMenu()
 {
-	
+
 	system("cls");
 	cout << " /$$      /$$                                               /$$$$$$$             /$$     /$$  " << endl;
 	cout << "| $$$    /$$$                                              | $$__  $$           | $$    | $$" << endl;
@@ -347,7 +345,7 @@ void mainMenu()
 	cout << endl;
 	cout << endl;
 	cout << endl;
-	cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl<<endl<<endl;
+	cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl << endl << endl;
 	cout << "MENU" << endl;
 	cout << "1 START GAME" << endl;
 	cout << "2 RULES" << endl;
@@ -401,7 +399,7 @@ int main()
 	while (true) {
 		cout << "Input your answer here:";
 		cin >> answer;
-		
+
 		if (checkAnswer(answer))
 		{
 			removeQuestion();
@@ -426,9 +424,9 @@ int main()
 		}
 		if (answer == "!F")
 		{
-				Forfeit();
-				system("pause");
-				break;
+			Forfeit();
+			system("pause");
+			break;
 		}
 
 
