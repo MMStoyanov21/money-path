@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int counter = 3;
+int lifeCounter = 3;
 int player = 7;
 int moneyCollected = 0, money = 100;
 string questions[14] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula?", "Which is the highest mountain in the world?","Which country's national football team won the 2018 WC in Russia?", "Which is the closest planet to the Sun?","Where is Lionel Messi from?",
@@ -36,10 +36,62 @@ void Forfeit()
 	cout << endl;
 	cout << endl;
 	cout << endl;
-	cout << "=================================================================" << endl;
-	cout << "====You decided to stop and get the collected money until now====" << endl;
-	cout << "=================================================================" << endl;
-	cout << "                    You won " << moneyCollected << " BGN";
+	cout << "						=================================================================" << endl;
+	cout << "						=========You decided to stop and get the collected money=========" << endl;
+	cout << "						=================================================================" << endl;
+	cout << "									You won " << moneyCollected << " BGN";
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
 }
 
 void FrontEnd()
@@ -54,7 +106,7 @@ void FrontEnd()
 	cout << endl;
 	cout << setw(45) << " ________________________ " << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << endl;
-	cout << setw(20) << "|" << setw(25) << "|" << "				      You have: " << counter << " lives left " << endl;
+	cout << setw(20) << "|" << setw(25) << "|" << "				      You have: " << lifeCounter << " lives left " << endl;
 	cout << setw(35) << "|  Question for " << money << " BGN  |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
 	cout << setw(20) << "|" << setw(25) << "|" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 	cout << setw(45) << "|___________  ___________|" << endl;
@@ -91,7 +143,7 @@ void TrueAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << "|" << endl;
-		cout << setw(20) << "|" << setw(25) << "|" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(20) << "|" << setw(25) << "|" << "				      You have: " << lifeCounter << " lives left " << endl;
 		cout << setw(35) << "|  Question for " << money << " BGN  |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
 		cout << setw(20) << "|" << setw(25) << "|" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
@@ -119,7 +171,7 @@ void TrueAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << lifeCounter << " lives left " << endl;
 		cout << setw(35) << "|  Question for " << money << " BGN |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
@@ -140,7 +192,7 @@ void TrueAnswer()
 }
 void WrongAnswer()
 {
-	counter--;
+	lifeCounter--;
 	system("cls");
 	if (money <= 999)
 	{
@@ -152,7 +204,7 @@ void WrongAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << lifeCounter << " lives left " << endl;
 		cout << setw(35) << "|  Question for " << money << " BGN  |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
@@ -178,7 +230,7 @@ void WrongAnswer()
 		cout << endl;
 		cout << setw(45) << " ________________________ " << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << endl;
-		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << counter << " lives left " << endl;
+		cout << setw(20) << "|" << setw(25) << " |" << "				      You have: " << lifeCounter << " lives left " << endl;
 		cout << setw(35) << "|  Question for " << money << " BGN |" << "				    You have: " << moneyCollected << " BGN collected" << endl;
 		cout << setw(20) << "|" << setw(25) << " |" << "         If you want to stop and get the money you collected until now input '!F'" << endl;
 		cout << setw(45) << "|___________  ___________|" << endl;
@@ -210,17 +262,17 @@ void GameOver()
 	cout << endl;
 	cout << endl;
 	cout << endl;
-<<<<<<< HEAD
+
 	cout << "							  _____ _____ _____ _____    _____ _____ _____ _____   " <<endl;
 	cout << "							 |   __|  _  |     |   __|  |     |  |  |   __| __  | " <<endl;
 	cout << "							 |  |  |     | | | |   __|  |  |  |  |  |   __|    -|" <<endl;
-	cout << "							 |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|" <<endl;
-=======
+	cout << "							 |_____|__|__|_|_|_|_____|  |_____|\\___/|_____|__|__|" <<endl;
+
 	cout << "							  _____ _____ _____ _____    _____ _____ _____ _____   " << endl;
 	cout << "							 |   __|  _  |     |   __|  |     |  |  |   __| __  | " << endl;
 	cout << "							 |  |  |     | | | |   __|  |  |  |  |  |   __|    -|" << endl;
 	cout << "							 |_____|__|__|_|_|_|_____|  |_____|\\___/|_____|__|__|" << endl;
->>>>>>> 275681044f4f6a958b42d7d4b20de437a7141df7
+
 	cout << endl;
 	if (moneyCollected < 500)
 	{
@@ -274,17 +326,17 @@ void Rules()
 {
 	system("cls");
 
-	cout << "/ $$$$$$$ / $$ / $$ / $$ / $$$$$$$$ / $$$$$$			" << endl;
-	cout << "| $$__  $$ | $$ | $$ | $$ | $$_____/ /$$__  $$			" << endl;
-	cout << "| $$  \\ $$ | $$ | $$ | $$ | $$ | $$  \\__/				" << endl;
-	cout << "| $$$$$$$/| $$ | $$ | $$ | $$$$$ | $$$$$$				" << endl;
-	cout << "| $$__  $$ | $$ | $$ | $$ | $$__ / \\____  $$			" << endl;
-	cout << "| $$  \\ $$ | $$ | $$ | $$ | $$ / $$  \\ $$				" << endl;
-	cout << "| $$ | $$ | $$$$$$/| $$$$$$$$ | $$$$$$$$ | $$$$$$/		" << endl;
-	cout << "|__/  |__ / \\______/ |________/|________ / \\______ /	" << endl;
+	cout << " /$$$$$$$  /$$   /$$ /$$       /$$$$$$$$  /$$$$$$ " << endl;
+	cout << "| $$__  $$| $$  | $$| $$      | $$_____/ /$$__  $$" << endl;
+	cout << "| $$  \\ $$| $$  | $$| $$      | $$      | $$  \\__/" << endl;
+	cout << "| $$$$$$$/| $$  | $$| $$      | $$$$$   |  $$$$$$ " << endl;
+	cout << "| $$__  $$| $$  | $$| $$      | $$__/    \\____  $$" << endl;
+	cout << "| $$  \\ $$| $$  | $$| $$      | $$       /$$  \\ $$" << endl;
+	cout << "| $$  | $$|  $$$$$$/| $$$$$$$$| $$$$$$$$| $$$$$$/" << endl;
+	cout << "|__/  |__/ \\______/ |________/|________/ \\______/" << endl;
 
 
-	cout << "1 W" << endl;
+	cout << "" << endl;
 
 
 }
@@ -350,30 +402,37 @@ int main()
 		{
 			TrueAnswer();
 		}
-		else
+		else if(answer != "!F")
 		{
 			WrongAnswer();
 		}
-		if (counter == 0)
+		if (lifeCounter == 0)
 		{
 			GameOver();
+			system("pause");
 			break;
 		}
 		if (player > 155)
 		{
 			GameWon();
+			system("pause");
 			break;
 		}
 		if (answer == "!F")
 		{
-			Forfeit();
-			break;
+			if (lifeCounter > 0)
+			{
+				
+				Forfeit();
+				system("pause");
+				break;
+			}
+
+
 		}
+		
 
 	}
-
-
-
 
 
 }
