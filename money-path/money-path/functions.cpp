@@ -11,7 +11,7 @@ string answer;
 string questionsArr[24] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula?",
 "Which is the highest mountain in the world?","Which country's national football team won the 2018 WC in Russia?", "Which is the closest planet to the Sun?","Where is Lionel Messi from?",
 "Which year Bulgaria was freed from Turkish slavery?","Which is the capital city of Canada?","Who is the football player with the most Ballon d'Or won?(answer only with family name)",
-"Which is the capital city of Albania?", "Which year did the second world war star?", "Which is the capital of Bulgaria?", "Which year did Vasil Levski die?", "Which year did the first world war start?",
+"Which is the capital city of Albania?", "Which year did the second world war start?", "Which is the capital of Bulgaria?", "Which year did Vasil Levski die?", "Which year did the first world war start?",
 "Calculate: 1^0 + 1", "Calculate: 2^3 + 16 - 23", "Calculate: 8 x 2 - 2 (2 + 3)", "Calculate: 100 - 10 ^ 2 + 3 ^ 2 * 5", "How many seconds are in one hour?", "When did Bulgaria last qualify for the world cup ?",
 "Calculate: (2 ^ 2 - 2) * 3", "Which was the first country attacked by Germany in WWII?", "Calculate: 10 * 3 - 4 ^ 2", "What are tires made out of?" };
 string answers[24] = {
