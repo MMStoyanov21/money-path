@@ -42,21 +42,10 @@ string answers[24] = {
 
 void game()
 {
-	system("cls");
 	while (true) {
 		cout << "Input your answer here:";
 		getline(cin, answer);
 
-		if (checkAnswer(answer))
-		{
-			removeQuestion();
-			trueAnswer();
-		}
-		else if (answer != "!F")
-		{
-			removeQuestion();
-			wrongAnswer();
-		}
 		if (lifeCounter == 0)
 		{
 			gameOver();
@@ -75,6 +64,19 @@ void game()
 			cin.get();
 			break;
 		}
+		if (checkAnswer(answer))
+		{
+			removeQuestion();
+			trueAnswer();
+		}
+		else if (answer != "!F")
+		{
+			removeQuestion();
+			wrongAnswer();
+		}
+		
+
+
 	}
 }
 
