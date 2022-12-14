@@ -44,7 +44,7 @@ Money Makers is a team from 4 people. Our goal is to make a game where the playe
 
   **Teodor Tanev** - **Frontend Developer** 
 
-  **Ivan Andreev** - **Quality enginieer** 
+  **Ivan Andreev** - **Quality Assurance enginieer** 
    
 
 
