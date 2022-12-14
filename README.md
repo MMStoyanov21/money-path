@@ -44,7 +44,7 @@ Money Makers is a team from 4 people. Our goal is to make a game where the playe
 
   **Teodor Tanev** - **Frontend Developer** 
 
-  **Ivan Andreev** - **Quality Assurance enginieer** 
+  **Ivan Andreev** - **Quality Assurance** 
    
 
 
@@ -55,7 +55,7 @@ Money Makers is a team from 4 people. Our goal is to make a game where the playe
 
 <h1>📝Recourses</h1>
   <p>
- <h2> <a href = >📄 Documentation</h2>
+ <h2> <a href = "Money Makers-Documenations/Money Makers-Documentation.docx">📄 Documentation</h2>
  <h2> <a href ="Money Makers-Documenations/Money-Path.pptx" >🖥 Presentation</h2>
  <h2> <a href ="Money Makers-Documenations/Money makers - QA.xlsx" >👨‍💻Excel table</h2>
 
