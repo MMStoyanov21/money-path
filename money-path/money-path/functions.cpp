@@ -1,11 +1,11 @@
 #include "main.h"
 
-int lifeCounter = 3;
+int lifeCounter = 4;
 int player = 7;
 int moneyCollected = 0, money = 100;
 int questionsLength = 24;
 string currentQuestion;
-char menuChoice;
+int menuChoice;
 string answer;
 
 string questionsArr[24] = { "Which is the biggest country in the world?", "Which is the highest peak on the Balkan Peninsula?",
@@ -42,10 +42,21 @@ string answers[24] = {
 
 void game()
 {
+	system("cls");
 	while (true) {
 		cout << "Input your answer here:";
 		getline(cin, answer);
 
+		if (checkAnswer(answer))
+		{
+			removeQuestion();
+			trueAnswer();
+		}
+		else if (answer != "!F")
+		{
+			removeQuestion();
+			wrongAnswer();
+		}
 		if (lifeCounter == 0)
 		{
 			gameOver();
@@ -64,19 +75,6 @@ void game()
 			cin.get();
 			break;
 		}
-		if (checkAnswer(answer))
-		{
-			removeQuestion();
-			trueAnswer();
-		}
-		else if (answer != "!F")
-		{
-			removeQuestion();
-			wrongAnswer();
-		}
-		
-
-
 	}
 }
 
@@ -239,7 +237,7 @@ void rules()
 	cout << "| $$  \\ $$| $$  | $$| $$      | $$       /$$  \\ $$" << endl;
 	cout << "| $$  | $$|  $$$$$$/| $$$$$$$$| $$$$$$$$| $$$$$$/" << endl;
 	cout << "|__/  |__/ \\______/ |________/|________/ \\______/" << endl;
-
+	cout << endl;
 	cout << "Rule 1: After starting the game there will be 15 easy questions and if you answer them right, you will win 1500 BGN" << endl;
 
 	cout << "1 Menu" << endl;
@@ -249,18 +247,18 @@ void rules()
 
 	while (true)
 	{
-		if (menuChoice == '2' || menuChoice == '1')
+		if (menuChoice == 2 || menuChoice == 1)
 		{
 			break;
 		}
 		cout << "Wrong input, try again: ";
 		cin >> menuChoice;
 	}
-	if (menuChoice == '1')
+	if (menuChoice == 1)
 	{
 		mainMenu();
 	}
-	else if (menuChoice == '2')
+	else if (menuChoice == 2)
 	{
 		exit(0);
 
@@ -306,25 +304,25 @@ void mainMenu()
 
 	cout << "Your choice here: ";
 	cin >> menuChoice;
-	while (true)
+	while(true)
 	{
-		if (menuChoice == '2' || menuChoice == '1')
+		if (menuChoice == 1 || menuChoice == 2)
 		{
 			break;
 		}
 		cout << "Wrong input, try again: ";
 		cin >> menuChoice;
 	}
-	if (menuChoice == '1')
+	if (menuChoice == 1)
 		printFrame(0, 0);
-	else if (menuChoice == '2')
+	else if (menuChoice == 2)
 		rules();
-	else if (menuChoice == '3')
+	else if (menuChoice == 3)
 		exit(0);
 }
 void removeQuestion()
 {
-	for (int i = 0; i < 14; i++)
+	for (int i = 0; i < 24; i++)
 	{
 		if (questionsArr[i] == currentQuestion)
 		{
