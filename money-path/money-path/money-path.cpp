@@ -21,7 +21,7 @@ int main()
 	cout << endl;
 
 
-	while (true) {
+	while (true){
 		cout << "Input your answer here:";
 		cin >> answer;
 
