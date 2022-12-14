@@ -56,8 +56,8 @@ Money Makers is a team from 4 people. Our goal is to make a game where the playe
 <h1>📝Recourses</h1>
   <p>
  <h2> <a href = >📄 Documentation</h2>
- <h2> <a href = >🖥 Presentation</h2>
- <h2> <a href = >👨‍💻Excel table</h2>
+ <h2> <a href ="Money Makers-Documenations/Money-Path.pptx" >🖥 Presentation</h2>
+ <h2> <a href ="Money Makers-Documenations/Money makers - QA.xlsx" >👨‍💻Excel table</h2>
 
 </p>
 	<h2 align="center">If you like our project you can rate us well!</h2>
