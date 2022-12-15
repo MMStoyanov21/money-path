@@ -136,6 +136,29 @@ void forfeit()
 	cout << "						=========You decided to stop and get the collected money=========" << endl;
 	cout << "						=================================================================" << endl;
 	cout << "									You won " << moneyCollected << " BGN" << endl;
+
+	cout << "1 Menu" << endl;
+	cout << "2 Exit" << endl;
+	cout << "Your choice here: " << endl;
+	cin >> menuChoice;
+	while (true)
+	{
+		if (menuChoice == '2' || menuChoice == '1')
+		{
+			break;
+		}
+		cout << "Wrong input, try again: ";
+		cin >> menuChoice;
+	}
+	if (menuChoice == '1')
+	{
+		mainMenu();
+	}
+	else if (menuChoice == '2')
+	{
+		exit(0);
+
+	}
 }
 
 
@@ -204,6 +227,29 @@ void gameOver()
 		cout << "									==You won 1000 BGN==" << endl;
 		cout << "									====================" << endl;
 	}
+	cout << "1 Menu" << endl;
+	cout << "2 Exit" << endl;
+	cout << "Your choice here: " << endl;
+	cin >> menuChoice;
+	while (true)
+	{
+		if (menuChoice == '2' || menuChoice == '1')
+		{
+			break;
+		}
+		cout << "Wrong input, try again: ";
+		cin >> menuChoice;
+	}
+	if (menuChoice == '1')
+	{
+		mainMenu();
+	}
+	else if (menuChoice == '2')
+	{
+		exit(0);
+
+	}
+
 }
 
 void gameWon()
@@ -222,6 +268,28 @@ void gameWon()
 	cout << "									==You won 1500 BGN==" << endl;
 	cout << "									====================" << endl;
 
+	cout << "1 Menu" << endl;
+	cout << "2 Exit" << endl;
+	cout << "Your choice here: " << endl;
+	cin >> menuChoice;
+	while (true)
+	{
+		if (menuChoice == '2' || menuChoice == '1')
+		{
+			break;
+		}
+		cout << "Wrong input, try again: ";
+		cin >> menuChoice;
+	}
+	if (menuChoice == '1')
+	{
+		mainMenu();
+	}
+	else if (menuChoice == '2')
+	{
+		exit(0);
+
+	}
 }
 
 
@@ -238,9 +306,17 @@ void rules()
 	cout << "| $$  | $$|  $$$$$$/| $$$$$$$$| $$$$$$$$| $$$$$$/" << endl;
 	cout << "|__/  |__/ \\______/ |________/|________/ \\______/" << endl;
 	cout << endl;
-	cout << "Rule 1: After starting the game there will be 15 easy questions and if you answer them right, you will win 1500 BGN" << endl;
+	<<<<<< < HEAD
+		cout << "Rule 1: After starting the game there will be 15 easy questions and if you answer them right, you win 1500 BGN" << endl;
+	cout << "Rule 2: All the answers are from one word or number" << endl;
+	cout << "Rule 3: If you answer wrong 3 times, you lose" << endl;
+	cout << "Rule 4: If you decide that you can't answer any question and you have only 1 life, you can give up and get the money which you collected until now" << endl;
+	cout << "Rule 5: Have fun :)" << endl;
+	====== =
+		cout << "Rule 1: After starting the game there will be 15 easy questions and if you answer them right, you will win 1500 BGN" << endl;
 
-	cout << "1 Menu" << endl;
+	>>>>>> > 70af2a5b261225c286266a4422023227dc6ac453
+		cout << "1 Menu" << endl;
 	cout << "2 Exit" << endl;
 	cout << endl << "Your choice here: ";
 	cin >> menuChoice;
@@ -304,7 +380,7 @@ void mainMenu()
 
 	cout << "Your choice here: ";
 	cin >> menuChoice;
-	while(true)
+	while (true)
 	{
 		if (menuChoice == 1 || menuChoice == 2)
 		{
